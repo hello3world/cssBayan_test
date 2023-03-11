@@ -15,20 +15,19 @@ body {
   max-width: 1920px;
   min-height: 100vh;
   margin: 0 auto;
-
 }
 
 /* Bayan */
 
 .bayan {
-    height: 100%;
+  height: 100%;
   background-image: url('../assets/img/bg.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
 }
 
 .bayan__container {
-    height: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,7 +78,9 @@ body {
   justify-content: space-between;
 }
 
-.bayan__pic-title {}
+.bayan__pic-title {
+  font-size: 14px;
+}
 
 .bayan__list:hover .bayan__point {
   display: inline-block;
