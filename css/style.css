@@ -3,29 +3,123 @@
   box-sizing: border-box;
 }
 
+html {
+  min-height: 100vh;
+}
+
+body {
+  min-height: 100vh;
+}
+
 .container {
   max-width: 1920px;
+  min-height: 100vh;
   margin: 0 auto;
+
 }
 
 /* Bayan */
 
+.bayan {
+    height: 100%;
+  background-image: url('../assets/img/bg.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.bayan__container {
+    height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bayan__title {
+  padding: 30px 30px 10px;
+  font-size: 50px;
+  color: rgb(255,
+      254,
+      240);
+}
+
+.bayan__subtitle {
+  padding: 10px 20px 20px;
+  font-size: 35px;
+  color: rgb(235, 223, 60);
+}
+
+.bayan__list {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
 .bayan__item {
+  max-width: 800px;
   list-style: none;
-  margin: 0 0 20px;
+  margin: 0 0 10px;
+  padding: 20px;
+  background-color: rgb(255,
+      254,
+      240);
+  cursor: pointer;
 }
 
 .bayan__input {
   display: none;
 }
 
-.bayan__content {
-  height: 0;
-  overflow: hidden;
-  transition: 0.5s;
+.bayan__label {
+  display: block;
 }
 
-.bayan__label:hover+.bayan__content {
+.bayan__name {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bayan__pic-title {}
+
+.bayan__list:hover .bayan__point {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background: url('../assets/img/plus.png') no-repeat;
+  background-size: contain;
+}
+
+.bayan__content {
+  height: 0;
+  margin: 0 auto;
+  /*   padding: 10px 0; */
+  opacity: 0;
+  text-align: center;
+  transition: 1s;
+}
+
+.bayan__img {
+  width: 40%;
+}
+
+.bayan__input:hover+.bayan__label>.bayan__content {
   height: auto;
+  margin: 0 auto;
   padding: 10px 0;
+  opacity: 1;
+}
+
+.bayan__input:checked+.bayan__label>.bayan__content {
+  height: auto;
+  margin: 0 auto;
+  padding: 10px 0;
+  opacity: 1;
+}
+
+.bayan__item:hover .bayan__point {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background: url('../assets/img/close.png') no-repeat;
+  background-size: contain;
 }
